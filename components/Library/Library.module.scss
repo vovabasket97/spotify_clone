@@ -1,0 +1,17 @@
+.library {
+  @apply flex flex-col;
+  &__wrapper {
+    @apply flex items-center justify-between px-5 pt-4;
+  }
+}
+
+.header {
+  @apply inline-flex items-center gap-x-2;
+  p {
+    @apply text-neutral-400 font-medium text-base;
+  }
+}
+
+.list {
+  @apply flex flex-col gap-y-2 mt-4 px-3;
+}
