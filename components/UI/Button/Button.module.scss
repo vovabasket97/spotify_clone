@@ -1,0 +1,9 @@
+.button {
+  @apply w-full rounded-full border border-transparent transition;
+  &:hover {
+    @apply opacity-75;
+  }
+  &:disabled {
+    @apply cursor-not-allowed opacity-50;
+  }
+}

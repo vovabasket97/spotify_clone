@@ -1,0 +1,28 @@
+.header {
+  @apply h-fit bg-gradient-to-b from-emerald-800 p-6;
+}
+
+.sideBtns,
+.switcher {
+  button {
+    @apply rounded-full flex items-center justify-center transition;
+    &:hover {
+      @apply opacity-75;
+    }
+  }
+}
+
+.sideBtns {
+  @apply flex md:hidden gap-x-2 items-center;
+}
+
+.wrapper {
+  @apply w-full mb-4 flex items-center justify-between;
+}
+
+.switcher {
+  @apply hidden md:flex gap-x-2 items-center;
+  button {
+    @apply bg-black;
+  }
+}

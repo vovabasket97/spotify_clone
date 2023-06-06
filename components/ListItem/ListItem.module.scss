@@ -1,0 +1,20 @@
+.listItem {
+  @apply relative flex items-center rounded-md overflow-hidden gap-x-4 bg-neutral-100/10 transition pr-4;
+  &:hover {
+    @apply bg-neutral-100/20;
+  }
+  p {
+    @apply font-medium truncate py-5;
+  }
+}
+
+.image {
+  @apply relative min-h-[64px] min-w-[64px];
+}
+
+.play {
+  @apply absolute transition opacity-0 rounded-full flex items-center justify-center bg-green-500 p-4 drop-shadow-md right-5;
+  &:hover {
+    @apply scale-110;
+  }
+}
