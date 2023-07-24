@@ -1,7 +1,7 @@
 .library {
-  @apply flex flex-col;
+  @apply flex flex-col px-5 py-4;
   &__wrapper {
-    @apply flex items-center justify-between px-5 pt-4;
+    @apply flex items-center justify-between;
   }
 }
 

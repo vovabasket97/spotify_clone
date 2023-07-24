@@ -24,7 +24,7 @@ const Sidebar: FC<PropsWithChildren> = ({ children }) => {
             ))}
           </div>
         </Box>
-        <Box className='overflow-y-auto h-full'>
+        <Box className='overflow-y-auto'>
           <Library />
         </Box>
       </div>
