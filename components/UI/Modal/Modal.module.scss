@@ -1,0 +1,24 @@
+.overlay {
+  @apply bg-neutral-900/90 backdrop-blur-sm fixed inset-0;
+}
+
+.content {
+  @apply fixed drop-shadow-md border border-neutral-700 top-1/2 left-1/2 max-h-full h-full md:h-auto md:max-h-[85vh] w-full md:w-[90vw] md:max-w-[450px] -translate-x-1/2 -translate-y-1/2
+  rounded-md bg-neutral-800 p-[25px] outline-none overflow-x-hidden overflow-y-auto;
+}
+
+.title {
+  @apply text-xl text-center font-bold mb-4;
+}
+
+.description {
+  @apply mb-5 text-sm leading-normal text-center;
+}
+
+.close {
+  @apply text-neutral-400 hover:text-white absolute inline-flex appearance-none items-center justify-center rounded-full outline-none;
+  height: 25px;
+  width: 25px;
+  top: 10px;
+  right: 10px;
+}
