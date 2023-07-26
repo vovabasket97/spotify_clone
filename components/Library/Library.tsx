@@ -3,11 +3,24 @@
 import { FC, useCallback } from "react";
 import { TbPlaylist } from "react-icons/tb";
 import { AiOutlinePlus } from "react-icons/ai";
+import { useUser } from "@/hooks/useUser";
+import useAuthModal from "@/hooks/useAuthModal";
+import useUploadModal from "@/hooks/useUploadModal";
 
 import styles from "./Library.module.scss";
 
 const Library: FC = () => {
-  const onClickHandler = useCallback(() => {}, []);
+  const authModal = useAuthModal();
+  const uploadModal = useUploadModal();
+  const { user } = useUser();
+
+  const onClickHandler = useCallback(() => {
+    if (!user) return authModal.onOpen();
+
+    // TODO: check for subscription
+
+    uploadModal.onOpen();
+  }, [user]);
 
   return (
     <div className={styles.library}>
