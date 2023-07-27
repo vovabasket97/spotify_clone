@@ -1,0 +1,11 @@
+.wrapper {
+  @apply bg-neutral-900 rounded-lg h-full w-full overflow-hidden overflow-y-auto;
+}
+
+.header {
+  @apply mb-2 flex flex-col gap-6;
+}
+
+.title {
+  @apply text-white text-3xl font-semibold;
+}

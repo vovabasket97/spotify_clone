@@ -7,9 +7,16 @@ import { useUser } from "@/hooks/useUser";
 import useAuthModal from "@/hooks/useAuthModal";
 import useUploadModal from "@/hooks/useUploadModal";
 
-import styles from "./Library.module.scss";
+import MediaItem from "../MediaItem/MediaItem";
 
-const Library: FC = () => {
+import styles from "./Library.module.scss";
+import { Song } from "@/types";
+
+interface LibraryProps {
+  songs: Song[];
+}
+
+const Library: FC<LibraryProps> = ({ songs }) => {
   const authModal = useAuthModal();
   const uploadModal = useUploadModal();
   const { user } = useUser();
@@ -31,7 +38,11 @@ const Library: FC = () => {
         </div>
         <AiOutlinePlus size={20} className='text-neutral-400 cursor-pointer hover:text-white transition' onClick={onClickHandler} />
       </div>
-      <div className={styles.list}>List of songs!</div>
+      <div className={styles.list}>
+        {songs.map(song => (
+          <MediaItem onClick={() => {}} key={song.id} data={song} />
+        ))}
+      </div>
     </div>
   );
 };

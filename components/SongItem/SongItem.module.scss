@@ -1,0 +1,21 @@
+.card {
+  @apply relative flex flex-col items-center justify-center rounded-md overflow-hidden gap-4 bg-neutral-400/5 cursor-pointer hover:bg-neutral-400/10 transition p-3;
+}
+
+.image {
+  @apply relative aspect-square w-full h-full rounded-md overflow-hidden;
+}
+
+.content {
+  @apply flex flex-col items-start w-full gap-1;
+  h3 {
+    @apply font-semibold truncate w-full;
+  }
+  p {
+    @apply text-neutral-400 text-sm pb-4 w-full truncate;
+  }
+}
+
+.play {
+  @apply absolute bottom-24 right-5;
+}

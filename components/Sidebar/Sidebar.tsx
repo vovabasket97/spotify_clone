@@ -6,11 +6,16 @@ import { getRoutes } from "@/configs/foutes";
 
 import Box from "../UI/Box/Box";
 import SidebarItem from "./SidebarItem";
-
-import styles from "./Sidebar.module.scss";
 import Library from "../Library/Library";
 
-const Sidebar: FC<PropsWithChildren> = ({ children }) => {
+import styles from "./Sidebar.module.scss";
+import { Song } from "@/types";
+
+interface SidebarProps extends PropsWithChildren {
+  songs: Song[];
+}
+
+const Sidebar: FC<SidebarProps> = ({ children, songs }) => {
   const pathname = usePathname();
   const routes = useMemo(() => getRoutes(pathname), [pathname]);
 
@@ -25,7 +30,7 @@ const Sidebar: FC<PropsWithChildren> = ({ children }) => {
           </div>
         </Box>
         <Box className='overflow-y-auto'>
-          <Library />
+          <Library songs={songs} />
         </Box>
       </div>
       <main>{children}</main>

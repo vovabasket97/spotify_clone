@@ -36,9 +36,11 @@ const UploadModal = () => {
       reset();
       onClose();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const onSubmitHandler: SubmitHandler<FieldValues> = async values => {
+    console.log("VALUES", values);
     try {
       setIsLoading(true);
 
@@ -108,7 +110,7 @@ const UploadModal = () => {
           id='song'
           type='file'
           disabled={isLoading}
-          {...register("song", { required: true })}
+          register={register("song", { required: true })}
           accept='.mp3'
         />
         <FileInput
@@ -116,7 +118,7 @@ const UploadModal = () => {
           id='image'
           type='file'
           disabled={isLoading}
-          {...register("image", { required: true })}
+          register={register("image", { required: true })}
           accept='image/*'
         />
         <Button disabled={isLoading} type='submit'>

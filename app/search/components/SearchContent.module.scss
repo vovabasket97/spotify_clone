@@ -1,0 +1,14 @@
+.noavailable {
+  @apply text-neutral-400 flex flex-col gap-2 w-full px-6;
+}
+
+.songs_grid {
+  @apply flex flex-col gap-2 w-full;
+}
+
+.songWrapper {
+  @apply flex items-center gap-4 w-full;
+  > div {
+    @apply flex-1;
+  }
+}
